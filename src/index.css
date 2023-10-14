@@ -1,0 +1,13 @@
+.App{
+  position: relative;
+  overflow: hidden;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 660px) {
+  
+}
