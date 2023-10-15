@@ -30,7 +30,7 @@ input{
     height: 50px;
     border: none;
     border-radius: 10px;
-    box-shadow: 5px 6px 10px #dbdada56;
+    box-shadow: 6px 10px 15px #d3cfcfa2;
 }
 #grn{
     background: rgb(31, 128, 31);
@@ -45,7 +45,8 @@ input{
     color: #fff;
 }
 .box{
-    height: 30vh;
+    height: 20vh;
+    margin-bottom: 5px;
     overflow: scroll;
 }
 .chek{

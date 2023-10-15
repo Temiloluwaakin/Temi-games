@@ -102,7 +102,6 @@ const Doi = () => {
                         <h2>Dead and Injured</h2><span onClick={handleRules}>Rules</span>
                     </span>
                     <p>Try to guess the 4-digit secret code.</p>
-                    <br/>
                     <input
                         type="text"
                         value={guess}
