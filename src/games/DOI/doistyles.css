@@ -1,12 +1,41 @@
 .doi{
     position: relative;
+    height: 97vh;
+    width: 100%;
 }
-
+.rules{
+    background: #dbdada56;
+    position: absolute;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+}
+.rul{
+    background: white;
+    padding: 20px 30px 20px 30px;
+    text-align: justify;
+    border-radius: 10px 10px 0 0;
+}
 .gamebg{
     padding: 80px 20px 2px 20px;
     text-align: center;
 }
-.rules{
+.chek{
+    margin: 20px auto;
+    position: fixed;
+    bottom: 10px;
+}
+.chek button{
+    padding: 10px 15px;
+    margin: 10px;
+}
+
+
+/*///////////.rul{
     position: fixed;
     width: 90%;
     bottom: 10px;
@@ -15,4 +44,4 @@
     font-size: 20px;
     padding-right: 10px;
     z-index: 3;
-}
+}////////////////////////////////////////////////////////////////////////////*/
