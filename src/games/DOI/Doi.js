@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Header from "../../Components/header";
 import './doistyles.css'
 
@@ -40,6 +40,8 @@ const Doi = () => {
 			setfeedbacks((prevState) => [...prevState, `${guess}...${dead} Dead, ${injured} Injured`]);
 		}
         setGuess('')
+        setDisableButton(false)
+        setSelectednumbers([])
 	};
 
 	const [rules, setRules] = useState(false);
@@ -56,9 +58,25 @@ const Doi = () => {
         setRules(true);
     }, []);
 
+
+    const [selectedNumbers, setSelectednumbers] = useState([]);
+    const [disabledButton, setDisableButton] = useState(false)
     const handleKeys = (nuk) => {
-        setGuess(guess + nuk)
+        if (!selectedNumbers.includes(nuk) && selectedNumbers.length < 4) {
+            setGuess(guess + nuk)
+           setSelectednumbers([...selectedNumbers, nuk])
+        }
+        if (selectedNumbers.length ===3) {
+            setDisableButton(true)
+        }
     }
+
+    const messagesEndRef = useRef(null);
+    useEffect(() => {
+        if (messagesEndRef.current) {
+            messagesEndRef.current.scrollTop = messagesEndRef.current.scrollHeight;
+        }
+    }, [feedbacks])
 
 
     return (
@@ -96,7 +114,8 @@ const Doi = () => {
                         }
                     </div>
 
-                    <div className="box">
+                    <div className="box" ref={messagesEndRef}
+                    >
                         {feedbacks.map((numl) => (
                             <p key={numl} >
                                 {numl}
@@ -106,12 +125,15 @@ const Doi = () => {
                     
                     <div className='chek'>
                         {numberKey.map((nuk) => (
-                            <button key={nuk} onClick={() => handleKeys(nuk)}>
+                            <button key={nuk} 
+                                onClick={() => handleKeys(nuk)} 
+                                disabled={disabledButton || selectedNumbers.includes(nuk)}
+                            >
                                 {nuk}
                             </button>
                         ))}<br/><br/>
-                        <button onClick={checkGuess}>Check</button>
-                        <button onClick={giveup}>Give Up</button>
+                        <button onClick={giveup} id="rdd">Give Up</button>
+                        <button onClick={checkGuess} id="grn">Check</button>
                     </div>
 				</div>
 			</div>

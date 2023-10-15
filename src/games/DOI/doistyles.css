@@ -13,6 +13,7 @@
     align-items: center;
     width: inherit;
     height: inherit;
+    z-index: 999;
 }
 .rul{
     background: white;
@@ -24,14 +25,42 @@
     padding: 80px 20px 2px 20px;
     text-align: center;
 }
+input{
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 6px 10px #dbdada56;
+}
+#grn{
+    background: rgb(31, 128, 31);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+}
+#rdd{
+    background: #803434;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+}
+.box{
+    height: 30vh;
+    overflow: scroll;
+}
 .chek{
     margin: 20px auto;
-    position: fixed;
-    bottom: 10px;
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 20px;
+    width: 80%;
 }
 .chek button{
-    padding: 10px 15px;
+    padding: 15px 20px;
     margin: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 3px 5px #dbdada56;
 }
 
 
