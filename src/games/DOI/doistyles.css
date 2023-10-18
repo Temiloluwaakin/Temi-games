@@ -31,6 +31,8 @@ input{
     border: none;
     border-radius: 10px;
     box-shadow: 6px 10px 15px #d3cfcfa2;
+    font-size: 20px;
+    letter-spacing: 5px;
 }
 #grn{
     background: rgb(31, 128, 31);
@@ -60,10 +62,19 @@ input{
     padding: 15px 20px;
     margin: 10px;
     border-radius: 5px;
+    background: black;
+    color: #fff;
     border: none;
     box-shadow: 3px 5px #dbdada56;
+    -webkit-box-shadow:3px 5px #dbdada56;
 }
-
+.chek button:disabled{
+    background: #534848;
+}
+.kkey{
+    padding: 30px 30px;
+    margin: 2px;
+}
 
 /*///////////.rul{
     position: fixed;
