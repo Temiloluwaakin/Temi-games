@@ -13,6 +13,9 @@ const Homepage = () => {
                     <img src={dai} alt="img" width={100}/>
                     <h3>Dead and Injured</h3>
                 </Link>
+                <Link to='/expencecalc' className="games">
+                    <h3>ExpenseCalc</h3>
+                </Link>
             </div>
 
         </div>

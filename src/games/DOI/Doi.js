@@ -6,14 +6,14 @@ const Doi = () => {
 
     const numberKey = ['1','2','3','4','5','6','7','8','9','0']
 
-    //first let computer generate number
+    //first let computer generate number that will be guessed
 	const generateNumber = () => {
 		let code = '';
 		const numbers = [0,1,2,3,4,5,6,7,8,9];
 		for (let i = 0; i < 4; i++) {
-		const randomIndex = Math.floor(Math.random() * numbers.length);
-		code += numbers[randomIndex];
-		numbers.splice(randomIndex, 1);
+            const randomIndex = Math.floor(Math.random() * numbers.length);
+            code += numbers[randomIndex];
+            numbers.splice(randomIndex, 1);
 		}
 		return code;
 	};
@@ -43,13 +43,13 @@ const Doi = () => {
                     <span style={{color:'blue'}}> {`${injured}  Injured, `} </span>
                     <span style={{color:'green'}}> {`${dead}  dead`} </span>
                 </div>
-            ]);
+            ]);/*setfeedbacks((prevState) => [...prevState, `${guess}...${dead} Dead, ${injured} Injured`]); formal code*/
 		}
         setGuess('')
         setDisableButton(false)
         setSelectednumbers([])
 	};
-    /*setfeedbacks((prevState) => [...prevState, `${guess}...${dead} Dead, ${injured} Injured`]);*/
+    
 
 	const [rules, setRules] = useState(false);
 	const handleRules =() => {
