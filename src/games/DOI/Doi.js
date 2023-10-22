@@ -36,6 +36,7 @@ const Doi = () => {
 			setfeedbacks((prevState) => [...prevState, 
 				`${guess}...Congratulations! You guessed the code within ${((feedbacks.length) + 1)} trial(s)`
 			]);
+            setDisableButton(true)
 		} else {
 			setfeedbacks((prevState) => [...prevState,
                 <div key={prevState.length}>
@@ -43,7 +44,7 @@ const Doi = () => {
                     <span style={{color:'blue'}}> {`${injured}  Injured, `} </span>
                     <span style={{color:'green'}}> {`${dead}  dead`} </span>
                 </div>
-            ]);/*setfeedbacks((prevState) => [...prevState, `${guess}...${dead} Dead, ${injured} Injured`]); formal code*/
+            ]);/*setfeedbacks((prevState) => [...prevState,`${guess}.${dead} Dead,${injured} Injured`]);formal code*/
 		}
         setGuess('')
         setDisableButton(false)
